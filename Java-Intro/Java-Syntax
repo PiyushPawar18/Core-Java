@@ -1,0 +1,7 @@
+package A;
+
+public class class_name {
+    public static void main(String[]  args){
+        //code...
+    }
+}

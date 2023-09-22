@@ -1,0 +1,90 @@
+package Function;
+import java.util.*;
+public class FunctionProgram {
+    //Non return type && Non argument
+    /* static void info(){              //static method/function
+        System.out.println("piyush");
+    }*/
+    /*static void info(String Website) {              //static parameter method/function
+        System.out.println("your Website name :=" + Website);
+    }*/
+    //Return int
+    /*
+    static int INT(){
+        return 354;
+    }
+    static float Float(){
+        return 23.3f;
+    }
+    static String STRING(){
+        return "piyush";
+    }
+    static boolean Boolean(){
+        return true;
+    }
+    static char Charactor(){
+        return 'p';
+    }*/
+
+    //static fun using parameters with return
+    /*
+    static int GST(int price,int gst){
+        gst=(price*gst)/100;
+        gst=price+gst;
+        return gst;
+    }
+    */
+    //not using static keyword we created function /method
+   /*
+   void piyush(){
+        System.out.println("My name is Piyush...:)");
+    }*/
+
+    int add(int a ,int b){
+        return a+b;
+    }
+
+
+
+    public static void main(String args[]){
+        Scanner sc=new Scanner(System.in);
+
+        //Syntax of Creating a object a class
+        //Class_name Obj_name=new Class_name();
+        FunctionProgram obj=new FunctionProgram();
+
+       /*
+        //calling static function
+        info();*/
+
+       /*
+       //Calling static parameters / argument / dynamic argument
+            info("@piyush");
+            info("@java");*/
+
+        /*
+        System.out.println(INT());
+        System.out.println(Charactor());
+        System.out.println(STRING());
+        System.out.println(Float());
+        System.out.println(Boolean());
+        */
+        //static return fun(parameter/argument) example
+        /*
+        int max=GST(1200,18);
+        System.out.println(max+20);
+        */
+        //with out using static keyword we call by object
+        /*
+        FunctionProgram obj=new FunctionProgram();
+        obj.piyush();
+        */
+
+        //we call function & parameter with object
+        /*
+        FunctionProgram obj=new FunctionProgram();
+        int sum=obj.add(5,2);
+        System.out.println(sum);*/
+
+    }
+}

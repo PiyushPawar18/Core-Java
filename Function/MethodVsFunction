@@ -1,1 +1,29 @@
-22
+package FunctionVsMethod;
+
+public class functionVsMethod {
+    //Method Declaration
+    //return_type function_name(...){}
+    void printHello(){
+        System.out.println("hello World..");
+    }
+
+    //Function Declaration
+    //access_modifier static return_type function_name(...){}
+    public static void add(){
+        int a=10,b=10;
+        System.out.println("Sum "+(a+b));
+    }
+    
+    public static void main(String[] args){
+
+        //Method calling
+        //class_name obj_name=new class_name();
+        functionVsMethod md=new functionVsMethod();
+        //obj-name.function_name();
+        md.printHello();
+
+        //Function calling
+        function_name();
+        add();
+    }
+}

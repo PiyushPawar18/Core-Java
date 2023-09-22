@@ -1,0 +1,32 @@
+package FunctionVsMethod;
+
+public class functionVsMethod {
+
+    int a=10;                     //instance variable
+    static int b=20;              //static variable
+
+    //Static function
+    static void show(){
+        System.out.println(b);        //static function only access static variable
+    }
+
+    //Non-Static method
+    void disp(){
+        System.out.println(a+" "+b);             //method access instance and static variable
+    }
+    
+    public static void main(String[] args){
+        //Static Function calling
+        //class_name.fuction_name();
+        //or direct calling ex---> function_name();
+        functionVsMethod.show();
+
+        //Non-Static Method calling
+        functionVsMethod md=new functionVsMethod();
+        md.disp();
+    }
+
+    //output
+    //  20 
+    //  10 20
+}

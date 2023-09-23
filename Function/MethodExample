@@ -1,0 +1,36 @@
+package FunctionVsMethod;
+import java.util.Scanner;
+public class functionVsMethod {
+   
+    //Method Example
+    int n1,n2;         //instance Variable --> inside a class but outside the methods or functions
+
+    int add,sub,multi,div,rem;
+    Scanner sc=new Scanner(System.in);
+    public static void main(String[] args){
+        functionVsMethod md=new functionVsMethod();
+        md.input();
+        md.process();
+        md.output();
+    }
+    void input(){
+        System.out.println("Enter Two Number:= ");
+        n1=sc.nextInt();
+        n2=sc.nextInt();
+    }
+    void process(){
+        add=n1+n2;
+        sub=n1-n2;
+        multi=n1*n2;
+        div=n1/n2;
+        rem=n1%n2;
+    }
+    void output(){
+        System.out.println("Addition of Tow no is := "+add);
+        System.out.println("Subtraction of Tow no is := "+sub);
+        System.out.println("Multiplication of Tow no is := "+multi);
+        System.out.println("Division of Tow no is := "+div);
+        System.out.println("Reminder of Tow no is := "+rem);
+
+    }
+}

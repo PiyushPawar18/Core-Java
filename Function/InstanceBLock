@@ -1,12 +1,11 @@
 package InstanceBlock;
 
 public class InstanceBlock {
-    
+
     //Instance Block is always executed before the Constructor
     //syntax ---> {
     //               ....//code
     //            }
-
     int a; String b;
     InstanceBlock(){                            //Constructor  Block
         a=10; b="piyush";
@@ -16,13 +15,25 @@ public class InstanceBlock {
         a=99; b="GitHub";
         System.out.println(a+" "+b);
     }
+    void show(){                     //method
+        a=75; b="String";
+        System.out.println(a+" "+b);
+    }
+    static void disp(){             //function
+        System.out.println("Welcome to My Repositories");
+    }
 
     public static void main(String[] args) {
+        InstanceBlock.disp();                                 //Call static function
         InstanceBlock obj=new InstanceBlock();                 //Call Constructor
+        obj.show();                                            //Call method
     }
-    
+
     //Output
-   /* 99 GitHub
-      10 piyush
+   /*
+    Welcome to My Repositories          // static function
+    99 GitHub                           //Instance
+    10 piyush                           //Constructor 
+    75 String                           //method
    */
 }

@@ -1,0 +1,28 @@
+package InstanceBlock;
+
+public class InstanceBlock {
+    
+    //Instance Block is always executed before the Constructor
+    //syntax ---> {
+    //               ....//code
+    //            }
+
+    int a; String b;
+    InstanceBlock(){                            //Constructor  Block
+        a=10; b="piyush";
+        System.out.println(a+" "+b);
+    }
+    {                                              //Instance Block
+        a=99; b="GitHub";
+        System.out.println(a+" "+b);
+    }
+
+    public static void main(String[] args) {
+        InstanceBlock obj=new InstanceBlock();                 //Call Constructor
+    }
+    
+    //Output
+   /* 99 GitHub
+      10 piyush
+   */
+}

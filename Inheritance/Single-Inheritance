@@ -1,0 +1,28 @@
+package Inheritance;
+        //Inheritance (extends)
+        //Simple/Single Inheritance
+
+        //if method/fuc/variable is [protected & public] is access another class
+        //if method/fun/variable is [private] is not access another class
+
+class SuperClass{
+    protected int roll,marks;     
+    void input(){                         //if input method is private it's cannot access a other class
+        System.out.println("Enter you Name, Roll_no, Marks :=");
+    }
+}
+
+class SubClass extends SuperClass{              //All data , feacture , behavious, properties of SuperClass ---> extends(access) --> subclass
+    String name;
+    void disp(){
+        name="piyush"; roll=18230; marks=80;
+        System.out.println("Name = "+name+" \nRollNo = "+roll+" \nMarks = "+marks);
+    }
+
+    public static void main(String[] args) {
+        SubClass obj=new SubClass();
+        obj.input();
+        obj.disp();
+    }
+}
+

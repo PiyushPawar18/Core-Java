@@ -1,0 +1,58 @@
+package Inheritance;
+        //Inheritance (extends)
+       //Multi-level Inheritance
+       //One Super(parent)Class and more Sub(Child)Class :)
+
+
+class GrandFather{
+    GrandFather(){
+        System.out.println("I am Grand Father Constructor");
+    }
+    void gfMethod(){
+        System.out.println("I am Grand Father Method");
+    }
+}
+
+class Father extends GrandFather{
+    Father(){
+        System.out.println("I am Father Constructor");
+    }
+    void fMethod(){
+        System.out.println("I am Father Method");
+    }
+}
+class Child extends Father{
+    Child(){
+        System.out.println("I am child Constructor");
+    }
+    void cMethod(){
+        System.out.println("I am Child Method");
+    }
+
+
+}
+class Main{
+    public static void main(String[] args) {
+            Child obj1=new Child();                 //output
+            obj1.gfMethod();                        //I am Grand Father Constructor
+            obj1.fMethod();                         //I am Father Constructor
+            obj1.cMethod();                         //I am child Constructor
+                                                    //I am Grand Father Method
+                                                    //I am Father Method
+                                                    //I am Child Method
+
+
+            Father obj2=new Father();                   //output
+            obj2.gfMethod();                            //I am Grand Father Constructor
+            obj2.fMethod();                             //I am Father Constructor
+                                                        //I am Grand Father Method
+                                                        //I am Father Method
+
+
+           GrandFather obj3=new GrandFather();            //output
+            obj3.gfMethod();                              //I am Grand Father Constructor
+                                                          //I am Grand Father Method
+    }
+}
+
+

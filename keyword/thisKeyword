@@ -1,0 +1,60 @@
+package thisKeywrod;
+//this keyword is reference of class
+
+/*
+class A{
+    A(){
+        System.out.println(this);
+    }
+}
+public class Main {
+    public static void main(String[] args) {
+        A r=new A();
+        System.out.println(r);
+    }
+}
+*/
+/*      output
+        thisKeywrod.A@5f184fc6
+        thisKeywrod.A@5f184fc6
+        */
+
+/*
+class A{
+    int a;          //Instance Variable
+    A(int a){          //local variable
+        this.a=a;        //a=a compiler is comfuse which is instance or local [this Keyword ---> instance Variable] so we use this keywrod
+    }
+    void show(){
+        System.out.println(a);
+    }
+
+    public static void main(String[] args) {
+        A r=new A(100);
+        r.show();
+    }
+}
+*/
+
+class A{
+    /*A(){
+        System.out.println("Default Constructor");
+    }
+    A(int a){
+        this();
+        System.out.println("parameterize Constructor");
+    }*/
+
+    A(){
+        this(234);
+        System.out.println("Default Constructor");
+    }
+    A(int a){
+        System.out.println("parameterize Constructor");
+    }
+
+    public static void main(String[] args) {
+        //A r=new A(34);
+        A r=new A();
+    }
+}

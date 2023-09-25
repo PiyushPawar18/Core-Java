@@ -1,0 +1,44 @@
+package StaticBlock;
+
+public class StaticBlock {
+    //Static Block
+    //executed before Instance Block
+    //syntax ---> Static{
+    //                     ....//code
+    //                   }
+
+    StaticBlock(){
+        System.out.println("Constructor");
+    }
+
+    {
+        System.out.println("Instance Block");
+    }
+
+    static{
+        System.out.println("Static Block");
+    }
+
+    static void show(){
+        System.out.println("Static function");
+    }
+
+    void disp(){
+        System.out.println("Method");
+    }
+}
+class B{
+    public static void main(String[] args) {
+        StaticBlock.show();
+        StaticBlock ref=new StaticBlock();
+        ref.disp();
+    }
+
+    //Output
+/*  Static Block
+    Static function
+    Instance Block
+    Constructor
+    Method
+*/
+}

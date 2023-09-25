@@ -1,0 +1,31 @@
+package SuperKeyword;
+class A{
+    int a=10;
+    A(String x){
+        System.out.println(x);
+    }
+    void show(){
+        System.out.println("piyush");
+    }
+}
+class B extends A{
+    int a=90;
+    B(){
+        super("A");                                 //Super Constructor
+        // [if default constructor in class A no need to declare Super keyword Compiler created a ---> super() ]
+        System.out.println("B");
+    }
+    void disp(){
+        System.out.println(a+" "+super.a);                     //Super Variable
+    }
+    void show(){
+        super.show();                             //Super method
+        System.out.println("pawar");
+    }
+}
+public class SuperKeyword {
+    public static void main(String[] args) {
+        B obj=new B();
+        obj.disp();
+    }
+}

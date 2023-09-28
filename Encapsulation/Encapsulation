@@ -1,0 +1,26 @@
+package Recursion;
+//Encapsulation
+//1---> Declare the class variable as a private
+//2---> declare the class Method as a public
+public class Encapsulation {
+    private int value;
+    public void setValue(int x){
+        value=x;
+    }
+    public int getValue(){
+        return value;
+    }
+}
+class main{
+    public static void main(String[] args) {
+        Encapsulation obj=new Encapsulation();
+        obj.setValue(45);
+        int ans=obj.getValue();           //Encapsulation
+        System.out.println(ans);
+
+        //Not user Encapsulation
+       /* obj.value=100;
+        System.out.println(obj.value);        //its a wrong and through the 2 error we cannot access private block/variable
+        */
+    }
+}

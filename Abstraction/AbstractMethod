@@ -1,0 +1,71 @@
+package AbstractionMethod;
+/*
+abstract class Programming{
+    public abstract void developer();               //we don't know that which programming language is there
+    public abstract void Rank();
+}
+class HTML extends Programming
+{
+    @Override
+    public void developer(){
+        System.out.println("Tim Berners lee");
+    }
+    @Override
+    public void Rank(){         //if we  cannot Overriding abstract method (Rank) so by default we can declare HTML class as abstract class
+        System.out.println("3rd");
+    }
+}
+abstract class  Java extends Programming{
+    @Override
+    public void developer(){
+        System.out.println("James Gosling");
+    }
+}
+public class AbstractionMethod {
+    public static void main(String[] args) {
+        *//*HTML obj=new HTML();
+        obj.developer();
+        Java obj2=new Java();
+        obj.developer();*//*
+
+        //we can not create abstract class obj but we created ref of abstract class
+        Programming ref=new HTML(); //super class has capability in reference to hold the sub class objects
+        ref.developer();
+        ref.Rank();
+        *//*Programming ref2=new Java();               //This is error because we declare abstract class object
+        ref2.developer();*//*
+    }
+}*/
+
+abstract class Programming{
+    public abstract void developer();               //we don't know that which programming language is there
+    public abstract void Rank();
+}
+abstract class HTML extends Programming
+{
+    @Override
+    public void developer(){
+        System.out.println("Java developer := james Gosling");
+    }
+}
+class Java extends HTML{
+    @Override
+    public void Rank(){
+        System.out.println("2nd");
+    }
+}
+public class AbstractionMethod {
+    public static void main(String[] args) {
+
+
+        Programming ref=new Java(); //super class has capability in reference to hold the sub class objects
+        ref.developer();
+        ref.Rank();
+
+    }
+}
+/*
+Output
+        Java developer := james Gosling
+        2nd
+*/

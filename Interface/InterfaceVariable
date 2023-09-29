@@ -1,0 +1,32 @@
+package InterfaceVariable;
+//we can prove
+//1.Variable -> public + static + final
+//2.Methods -> public + abstract
+
+interface customers{
+    int amt=5;        //public + static + final
+
+    //public abstract void purchase(); <------ this is abstract
+    void purchase();    //public + abstract
+}
+class Sell implements customers{
+    @Override
+    public void purchase(){
+        //amt=7;        <---------- this is final so we cannot assign a value to final variable amt
+        System.out.println("piyush needs "+amt+" kg rice");
+        //amt is public therefore we can use this in method
+    }
+}
+class InterfaceVariable{
+    public static void main(String[] args) {
+        customers ref=new Sell();
+        ref.purchase();
+        System.out.println(customers.amt);        //we not use obj for variable because its a static variable by default
+    }
+}
+
+/*
+Output
+        piyush needs 5 kg rice
+        5
+*/

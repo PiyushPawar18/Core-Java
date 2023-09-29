@@ -1,0 +1,39 @@
+package InterfaceIntroduction;
+import java.util.Scanner;
+interface Client{
+    void input();      //public + abstract
+    void output();     //public + abstract
+    //public ---> interface ke bahar implement kar sake
+}
+
+//To achive interface java provid a keyword called [implements]
+class Developer implements Client{
+    String name;
+    double sal;
+    public void input(){                        //by default access modifier is default we can write public access modifier
+        Scanner sc=new Scanner(System.in);
+        System.out.println("Enter Username :=");
+        name=sc.nextLine();
+
+        System.out.println("Enter salary :=");
+        sal=sc.nextDouble();
+    }
+    public void output(){
+        System.out.println(name+" "+sal);
+    }
+
+    public static void main(String[] args) {
+        Client obj=new Developer();
+        obj.input();
+        obj.output();
+    }
+}
+
+/*
+Output
+        Enter Username :=
+        piyush
+        Enter salary :=
+        342
+        piyush 342.0
+*/

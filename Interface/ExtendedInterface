@@ -1,0 +1,42 @@
+package ExtendingInterface;
+
+interface GrandFather{
+    void add();
+}
+interface Father extends GrandFather{
+
+    void sub();
+}
+class chile implements Father{
+    @Override
+    public void add(){
+        int a=34,b=45,c;
+        c=a+b;
+        System.out.println(c);
+    }
+    @Override
+    public void sub(){
+        int a=45,b=67,c;
+        c=a-b;
+        System.out.println(c);
+    }
+    chile(){
+        System.out.println("Chile Constructor");
+    }
+    public void chileMethod(){
+        System.out.println("ChileMethod");
+    }
+}
+public class ExtendInterface {
+    public static void main(String[] args) {
+        chile obj=new chile();
+        obj.add();
+        obj.sub();
+        //obj.chileMthod();      we con do it :(
+    }
+}
+/*
+       output
+        79
+        -22
+        */

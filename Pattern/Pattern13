@@ -1,0 +1,27 @@
+/*
+//        _ _ _ _ 1
+//        _ _ _ 2 1 2
+//        _ _ 3 2 1 2 3
+//        _ 4 3 2 1 2 3 4
+//        5 4 3 2 1 2 3 4 5
+        for(int i=1;i<=5;i++){
+             int f=i;
+             for(int s=4;s>=i;s--){
+                 System.out.print("_ ");
+             }
+             for(int j=1;j<=i;j++){
+                 if(i==1){
+                     System.out.print(i+" ");
+                 }
+                 else if(i>1){
+
+                     System.out.print(f+" ");
+                     f--;
+                 }
+
+             }
+             for(int c=2;c<=i;c++){
+                 System.out.print(c+" ");
+             }
+             System.out.println();
+         }*/

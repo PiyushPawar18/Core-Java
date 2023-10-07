@@ -1,0 +1,62 @@
+
+/*
+//        ____*
+//        ___*.*
+//        __*...*
+//        _*.....*
+//        __*...*
+//        ___*.*
+//        ____*
+        System.out.println("Enter the number:=");
+        Scanner sc=new Scanner(System.in);
+        int n=sc.nextInt();
+        int cont=1;
+        for(int i=1;i<=n;i++){
+            for(int space=n;space>=i;space--){
+                System.out.print("_");
+            }
+            for(int j=1;j<=cont;j++){
+                if(j==1){
+                    System.out.print("*");
+                }
+                else if(j!=1){
+                    if(j<cont){
+                        System.out.print(".");
+                    }
+                    else{
+                        System.out.print("*");
+                    }
+                }
+            }
+            if(n>i){
+                cont=cont+2;
+            }
+            else{
+                cont=cont-2;
+            }
+            System.out.println();
+        }
+
+        for(int a=n-1;a>=1;a--){
+            for(int s=n;s>=a;s--)
+            {
+                System.out.print("_");
+            }
+            for(int j=1;j<=cont;j++){
+                if(j==1){
+                    System.out.print("*");
+                }
+                else if(j!=1){
+                    if(j<cont){
+                        System.out.print(".");
+                    }
+                    else{
+                        System.out.print("*");
+                    }
+                }
+            }
+            if(n>a){
+                cont=cont-2;
+            }
+            System.out.println();
+        }*/

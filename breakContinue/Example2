@@ -1,0 +1,28 @@
+package BreakContinue;
+
+public class Break {
+    public static void main(String[] args){
+        int count=0;
+        for(int i=0;i<10;i++){
+            if(i>=4 && i<=6){
+
+                System.out.println("This is "+i);
+                continue;                                       //Continue
+            }
+            if(i==8){
+                break;                                           //break
+            }
+            System.out.println(i);
+        }
+    }
+}
+
+Output
+0
+1
+2
+3
+This is 4
+This is 5
+This is 6
+7
